@@ -13,8 +13,11 @@ const userSchema = new Schema({
     },
     password:{
         type: String,
-        lowercase: true, 
-        unique: true,
         required: true,
     }
-})
+});
+
+
+const UserModel  = db.model('user', userSchema);
+
+module.exports = UserModel;
